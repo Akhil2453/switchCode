@@ -4,7 +4,7 @@ import time
 from tkinter import *
 import tkinter.font as tkFont
 import requests
-from PIL import Image, ImageTk
+#from PIL import Image, ImageTk
 
 def raise_frame(frame):
     frame.tkraise()

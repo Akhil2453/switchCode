@@ -130,7 +130,7 @@ def loop():
 
 #create the window
 root = Tk()
-root.title("Cigarette Butt Crusher: BioCrux")
+root.title("Bottle Crusher")
 root.geometry('800x480')
 
 welcome = Frame(root)
@@ -148,7 +148,7 @@ count = StringVar()
 dfont = tkFont.Font(size=-6)
 myfont = tkFont.Font(size=20)
 mfont = tkFont.Font(size=12)
-wel = Label(welcome, text="Welcome\nPlease extinguish and drop your Cigarette butt here", font=myfont)
+wel = Label(welcome, text="Welcome to Biocrux Zone\nPlease drop your waste bottle here to get rewarded", font=myfont)
 wel.grid(row=0, column=1, padx=0, pady=0)
 wel.place(x=50, y=185)
 # load = Image.open("banner.png")
@@ -180,7 +180,7 @@ Button(PageOne, text='Enter', bg='#0052cc', fg='#ffffff', command=number_e, bord
 Button(PageOne, text='Cancel', command=cancel, borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=7, column=2)
 
 Label(PageTwo, text=" ", font=myfont).grid(row=0, column=1, padx=5, pady=5)
-Label(PageTwo, text="Thank You", font=myfont).grid(row=1, column=1, padx=150, pady=200)
+Label(PageTwo, text="Thank You for your contribution in making our environment clean.\nBe Clean. Go Green.", font=myfont).grid(row=1, column=1, padx=150, pady=200)
 Button(PageTwo, text="welcomeScreen", command=lambda:raise_frame(welcome)).grid(row=2, column=1, padx=35, pady=35)
 
 

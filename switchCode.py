@@ -20,7 +20,7 @@ count = ""
 cnt = 0
 
 #GPIO pins
-button = 16
+button = 18
 
 #Fulscreen or windowed
 fullscreen = False
@@ -92,7 +92,7 @@ def resize(event=None):
 
 def setup():
     GPIO.setwarnings(False)
-    GPIO.setmode(GPIO.BOARD)
+    GPIO.setmode(GPIO.BCM)
     GPIO.setup(button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
     #GPIO.setmode(GPIO.BCM)
     #GPIO.setup(signal, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -115,12 +115,17 @@ def loop():
     global visible
     global count
     global cnt
-    button_state = GPIO.input(button)
-    if  button_state == False:
-        GPIO.output(led, True)
-        print('Button Pressed...')
-        while GPIO.input(button) == False:
-            time.sleep(0.2)
+    c=0
+    a=GPIO.input(button)
+    if(a == False):
+        time.sleep(0.2)
+        c=c+1
+        print("Button Pressed:",c,"times")
+        raise_frame(PageOne)
+        cnt = cnt + 1
+        count.set(cnt)
+        print("count: ", cnt)
+    
     root.after(500, loop)
 
 #create the window

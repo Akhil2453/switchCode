@@ -35,7 +35,7 @@ def number_e():
     pushCnt = str(cnt)
     print(num)
     print(pushCnt)
-    para = {'action': 'saveUserData', 'MOB': num, 'MCID': '002000501', 'BTNO': pushCnt}
+    para = {'action': 'saveUserData', 'MOB': num, 'MCID': '002000311', 'BTNO': pushCnt}
     r = requests.post("http://clickcash.in/apisave/apiDataSavever2.php", data=para)
     print(r.text)
     visible = True
@@ -117,7 +117,8 @@ def loop():
     global cnt
     c=0
     a=GPIO.input(button)
-    if(a == False):
+    b=int(input("1 or 0: "))
+    if(a == False or b == 1):
         time.sleep(0.2)
         c=c+1
         print("Button Pressed:",c,"times")
@@ -131,7 +132,7 @@ def loop():
 #create the window
 root = Tk()
 root.title("Bottle Crusher")
-root.geometry('800x480')
+root.geometry('680x1024')
 
 welcome = Frame(root)
 PageOne = Frame(root)
@@ -148,9 +149,9 @@ count = StringVar()
 dfont = tkFont.Font(size=-6)
 myfont = tkFont.Font(size=20)
 mfont = tkFont.Font(size=12)
-wel = Label(welcome, text="Welcome to Biocrux Zone\nPlease drop your waste bottle here to get rewarded", font=myfont)
-wel.grid(row=0, column=1, padx=0, pady=0)
-wel.place(x=50, y=185)
+wel = Label(welcome, text="Welcome to Biocrux Zone.\n\n\nPlease drop\nyour waste bottle here\nto get rewarded", font=myfont)
+wel.grid(row=0, column=0, padx=125, pady=400)
+#wel.place(x=70, y=200)
 # load = Image.open("banner.png")
 # load = load.resize((800,250), Image.BICUBIC)
 # render = ImageTk.PhotoImage(load)
@@ -180,7 +181,7 @@ Button(PageOne, text='Enter', bg='#0052cc', fg='#ffffff', command=number_e, bord
 Button(PageOne, text='Cancel', command=cancel, borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=7, column=2)
 
 Label(PageTwo, text=" ", font=myfont).grid(row=0, column=1, padx=5, pady=5)
-Label(PageTwo, text="Thank You for your contribution in making our environment clean.\nBe Clean. Go Green.", font=myfont).grid(row=1, column=1, padx=150, pady=200)
+Label(PageTwo, text="Thank You for your contribution in making our environment clean.\nBe Clean. Go Green.", font=myfont).grid(row=1, column=1, padx=85, pady=200)
 Button(PageTwo, text="welcomeScreen", command=lambda:raise_frame(welcome)).grid(row=2, column=1, padx=35, pady=35)
 
 

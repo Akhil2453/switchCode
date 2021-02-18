@@ -161,7 +161,7 @@ img.image = render
 img.place(x=0, y=0)
 img.grid(row=0, column=0)
 
-Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=2, row=0, column=0, padx=20, pady=5)
+Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=2, row=0, column=0, padx=55, pady=5)
 Label(PageOne, text="Bottle Count: ", font=myfont).grid(row=1, column = 0, padx=50, pady=5, columnspan=2)
 Label(PageOne, textvariable=count, font=myfont).grid(row=1, column=1, padx=15, pady=5)
 e = Entry(PageOne, textvariable=number, width=20, font=myfont)
@@ -175,6 +175,7 @@ Button(PageOne, text='6', command=lambda:num_get(6), borderwidth=5, relief=RAISE
 Button(PageOne, text='7', command=lambda:num_get(7), borderwidth=5, relief=RAISED, height=3, width=5, font=myfont).grid(row=5, column=0)
 Button(PageOne, text='8', command=lambda:num_get(8), borderwidth=5, relief=RAISED, height=3, width=5, font=myfont).grid(row=5, column=1)
 Button(PageOne, text='9', command=lambda:num_get(9), borderwidth=5, relief=RAISED, height=3, width=5, font=myfont).grid(row=5, column=2)
+Button(PageOne, text='0', command=lambda:num_get(0), borderwidth=5, relief=RAISED, height=3, width=5, font=myfont).grid(row=6, column=1)
 Button(PageOne, text='Delete', command=delt, borderwidth=5, relief=RAISED, height=3, width=5, font=myfont).grid(row=6, column=2)
 Button(PageOne, text='Clear', command=clr, borderwidth=5, relief=RAISED, height=3, width=5, font=myfont).grid(row=6, column=0)
 Button(PageOne, text='Enter', bg='#0052cc', fg='#ffffff', command=number_e, borderwidth=5, relief=RAISED, height=3, width=10, font=myfont).grid(row=7, column=0, columnspan=2)

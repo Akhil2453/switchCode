@@ -182,7 +182,7 @@ Button(PageOne, text='Enter', bg='#0052cc', fg='#ffffff', command=number_e, bord
 Button(PageOne, text='Cancel', command=cancel, borderwidth=5, relief=RAISED, height=3, width=5, font=myfont).grid(row=7, column=2)
 
 Label(PageTwo, text=" ", font=myfont).grid(row=0, column=1, padx=5, pady=5)
-Label(PageTwo, text="Thank You\n\nfor your contribution\n\nin making our environment clean.\n\nBe Clean. Go Green.", font=myfont).grid(row=1, column=1, padx=25, pady=200)
+Label(PageTwo, text="Thank You\n\nfor your contribution\n\nin making our environment clean.\n\n\n\nBe Clean. Go Green.", font=myfont).grid(row=1, column=1, padx=25, pady=200)
 #Button(PageTwo, text="welcomeScreen", command=lambda:raise_frame(welcome)).grid(row=2, column=1, padx=35, pady=35)
 
 

@@ -161,7 +161,7 @@ img.image = render
 img.place(x=0, y=0)
 img.grid(row=0, column=0)
 
-Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=2, row=0, column=0, padx=55, pady=5)
+Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=3, row=0, column=0, padx=55, pady=5)
 Label(PageOne, text="Bottle Count: ", font=myfont).grid(row=1, column = 0, padx=50, pady=5, columnspan=2)
 Label(PageOne, textvariable=count, font=myfont).grid(row=1, column=1, padx=15, pady=5)
 e = Entry(PageOne, textvariable=number, width=20, font=myfont)

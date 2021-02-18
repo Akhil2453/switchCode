@@ -126,20 +126,19 @@ def loop():
         cnt = cnt + 1
         count.set(cnt)
         print("count: ", cnt)
-    
     root.after(500, loop)
 
 #create the window
 root = Tk()
 root.title("Bottle Crusher")
-root.geometry('680x1024')
+root.geometry('640x1024')
 
 welcome = Frame(root)
 PageOne = Frame(root)
 PageTwo = Frame(root)
 
 for frame in (welcome, PageOne, PageTwo):
-    frame.grid(row=7, column=3, sticky='news')
+    frame.grid(row=9, column=2, sticky='news')
 
 value = DoubleVar()
 msg = StringVar()
@@ -147,25 +146,27 @@ number = StringVar()
 count = StringVar()
 
 dfont = tkFont.Font(size=-6)
-myfont = tkFont.Font(size=20)
+myfont = tkFont.Font(size=24)
 mfont = tkFont.Font(size=12)
-wel = Label(welcome, text="Welcome to Biocrux Zone.\n\n\nPlease drop\nyour waste bottle here\nto get rewarded", font=myfont)
-wel.grid(row=1, column=0, padx=125, pady=400)
+wel = Label(welcome, text="Welcome to Biocrux Zone", font=myfont)
+wel.grid(row=1, column=0, padx=50, pady=100)
 #wel.place(x=70, y=200)
+wel1 = Label(welcome, text="\nPlease drop\n\nyour waste bottle here\n\nto get rewarded", font=myfont)
+wel1.grid(row=2, column=0, padx=50, pady=0)
 load = Image.open("logo.jpg")
-load = load.resize((680,250), Image.BICUBIC)
+load = load.resize((640,350), Image.BICUBIC)
 render = ImageTk.PhotoImage(load)
 img = Label(welcome, image=render)
 img.image = render
 img.place(x=0, y=0)
 img.grid(row=0, column=0)
 
-Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=3, row=0, column=0, padx=100, pady=5)
-Label(PageOne, text="Cigarette Count: ", font=myfont).grid(row=1, column = 0, padx=115, pady=5, columnspan=2)
+Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=3, row=0, column=0, padx=25, pady=5)
+Label(PageOne, text="Bottle Count: ", font=myfont).grid(row=1, column = 0, padx=50, pady=5, columnspan=2)
 Label(PageOne, textvariable=count, font=myfont).grid(row=1, column=1, padx=15, pady=5)
 e = Entry(PageOne, textvariable=number, width=30, font=myfont)
 e.grid(columnspan=3, row=2, column=0, padx=150, pady=15)
-Button(PageOne, text='1', command=lambda:num_get(1), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=3, column=0)
+Button(PageOne, text='1', command=lambda:num_get(1), borderwidth=3, relief=RAISED, height=3, width=5, font=myfont).grid(row=3, column=0)
 Button(PageOne, text='2', command=lambda:num_get(2), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=3, column=1)
 Button(PageOne, text='3', command=lambda:num_get(3), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=3, column=2)
 Button(PageOne, text='4', command=lambda:num_get(4), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=4, column=0)

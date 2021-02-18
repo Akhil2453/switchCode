@@ -4,7 +4,7 @@ import time
 from tkinter import *
 import tkinter.font as tkFont
 import requests
-#from PIL import Image, ImageTk
+from PIL import Image, ImageTk
 
 def raise_frame(frame):
     frame.tkraise()
@@ -150,15 +150,15 @@ dfont = tkFont.Font(size=-6)
 myfont = tkFont.Font(size=20)
 mfont = tkFont.Font(size=12)
 wel = Label(welcome, text="Welcome to Biocrux Zone.\n\n\nPlease drop\nyour waste bottle here\nto get rewarded", font=myfont)
-wel.grid(row=0, column=0, padx=125, pady=400)
+wel.grid(row=1, column=0, padx=125, pady=400)
 #wel.place(x=70, y=200)
-# load = Image.open("banner.png")
-# load = load.resize((800,250), Image.BICUBIC)
-# render = ImageTk.PhotoImage(load)
-# img = Label(welcome, image=render)
-# img.image = render
-# img.place(x=0, y=0)
-# img.grid(row=0, column=0)
+load = Image.open("logo.jpg")
+load = load.resize((680,250), Image.BICUBIC)
+render = ImageTk.PhotoImage(load)
+img = Label(welcome, image=render)
+img.image = render
+img.place(x=0, y=0)
+img.grid(row=0, column=0)
 
 Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=3, row=0, column=0, padx=100, pady=5)
 Label(PageOne, text="Cigarette Count: ", font=myfont).grid(row=1, column = 0, padx=115, pady=5, columnspan=2)

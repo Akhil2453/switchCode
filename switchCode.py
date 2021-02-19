@@ -118,7 +118,7 @@ def loop():
     c=0
     a=GPIO.input(button)
     b=int(input("1 or 0: "))
-    if(a == False or b == 1):
+    if(a == False):
         time.sleep(0.2)
         c=c+1
         print("Button Pressed:",c,"times")

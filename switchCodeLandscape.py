@@ -157,7 +157,7 @@ load = load.resize((850,450), Image.BICUBIC)
 render = ImageTk.PhotoImage(load)
 img = Label(welcome, image=render)
 img.image = render
-img.place(x=0, y=0)
+img.place(x=87, y=0)
 #img.grid(row=0, column=0)
 
 Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=3, row=0, column=0, padx=55, pady=5)

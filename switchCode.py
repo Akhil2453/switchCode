@@ -117,7 +117,7 @@ def loop():
     global cnt
     c=0
     a=GPIO.input(button)
-    b=int(input("1 or 0: "))
+    #b=int(input("1 or 0: "))
     if(a == False):
         time.sleep(0.2)
         c=c+1

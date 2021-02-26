@@ -117,7 +117,6 @@ def loop():
     global cnt
     c=0
     a=GPIO.input(button)
-    b=int(input("1 or 0: "))
     if(a == False):
         time.sleep(0.2)
         c=c+1
@@ -146,19 +145,19 @@ number = StringVar()
 count = StringVar()
 
 dfont = tkFont.Font(size=-6)
-myfont = tkFont.Font(size=24)
+myfont = tkFont.Font(size=20)
 mfont = tkFont.Font(size=12)
 wel = Label(welcome, text="Welcome to Biocrux Zone", font=myfont)
 wel.grid(row=1, column=0, padx=50, pady=100)
 #wel.place(x=70, y=200)
-wel1 = Label(welcome, text="\nPlease drop\n\nyour waste bottle here\n\nto get rewarded", font=myfont)
+wel1 = Label(welcome, text="\nPlease drop\nyour waste bottle here\nto get rewarded", font=myfont)
 wel1.grid(row=2, column=0, padx=50, pady=0)
 load = Image.open("logo.jpg")
-load = load.resize((1024,250), Image.BICUBIC)
+load = load.resize((850,350), Image.BICUBIC)
 render = ImageTk.PhotoImage(load)
 img = Label(welcome, image=render)
 img.image = render
-img.place(x=0, y=0)
+img.place(x=87, y=0)
 img.grid(row=0, column=0)
 
 Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=3, row=0, column=0, padx=55, pady=5)

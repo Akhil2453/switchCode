@@ -154,7 +154,7 @@ wel.grid(row=1, column=0, padx=50, pady=100)
 wel1 = Label(welcome, text="\nPlease drop\n\nyour waste bottle here\n\nto get rewarded", font=myfont)
 wel1.grid(row=2, column=0, padx=50, pady=0)
 load = Image.open("logo.jpg")
-load = load.resize((640,350), Image.BICUBIC)
+load = load.resize((1024,250), Image.BICUBIC)
 render = ImageTk.PhotoImage(load)
 img = Label(welcome, image=render)
 img.image = render

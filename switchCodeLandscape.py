@@ -163,7 +163,7 @@ img.grid(row=0, column=0, padx=406, pady=25)
 
 Label(PageOne, text="Enter your Mobile Number to get Rewarded\n", font=myfont).grid(columnspan=3, row=0, column=0, padx=(185,1), pady=15)
 Label(PageOne, text="Bottle Count: ", font=myfont).grid(row=1, column = 0, padx=(250,1), pady=5, columnspan=2)
-Label(PageOne, textvariable=count, font=myfont).grid(row=1, column=2, padx=(10,1), pady=5)
+Label(PageOne, textvariable=count, font=myfont).grid(row=1, column=2, padx=(0,1), pady=5)
 e = Entry(PageOne, textvariable=number, width=20, font=myfont)
 e.grid(columnspan=3, row=2, column=0, padx=(260,1), pady=15)
 Button(PageOne, text='1', command=lambda:num_get(1), borderwidth=5, relief=RAISED, height=1, width=10, font=nfont).grid(row=3, column=0, padx=(200,10), pady=(15,0))

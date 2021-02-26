@@ -165,7 +165,7 @@ Label(PageOne, text="Bottle Count: ", font=myfont).grid(row=1, column = 0, padx=
 Label(PageOne, textvariable=count, font=myfont).grid(row=1, column=2, padx=(10,1), pady=5)
 e = Entry(PageOne, textvariable=number, width=20, font=myfont)
 e.grid(columnspan=3, row=2, column=0, padx=(325,1), pady=15)
-Button(PageOne, text='1', command=lambda:num_get(1), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=3, column=0)
+Button(PageOne, text='1', command=lambda:num_get(1), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=3, column=0, padx=(200,10), pady=(10,0))
 Button(PageOne, text='2', command=lambda:num_get(2), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=3, column=1)
 Button(PageOne, text='3', command=lambda:num_get(3), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=3, column=2)
 Button(PageOne, text='4', command=lambda:num_get(4), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=4, column=0)

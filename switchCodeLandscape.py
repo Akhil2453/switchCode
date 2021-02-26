@@ -137,7 +137,7 @@ PageOne = Frame(root)
 PageTwo = Frame(root)
 
 for frame in (welcome, PageOne, PageTwo):
-    frame.grid(row=9, column=3, sticky='news')
+    frame.grid(row=8, column=3, sticky='news')
 
 value = DoubleVar()
 msg = StringVar()
@@ -160,11 +160,11 @@ img.image = render
 #img.place(x=87, y=0)
 img.grid(row=0, column=0, padx=87, pady=0)
 
-Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=3, row=0, column=0, padx=155, pady=5)
-Label(PageOne, text="Bottle Count: ", font=myfont).grid(row=1, column = 0, padx=50, pady=5, columnspan=2)
-Label(PageOne, textvariable=count, font=myfont).grid(row=1, column=2, padx=15, pady=5)
+Label(PageOne, text="Enter your Mobile Number: ", font=myfont).grid(columnspan=3, row=0, column=0, padx=(355,1), pady=15)
+Label(PageOne, text="Bottle Count: ", font=myfont).grid(row=1, column = 0, padx=(370,1), pady=5, columnspan=2)
+Label(PageOne, textvariable=count, font=myfont).grid(row=1, column=2, padx=(10,1), pady=5)
 e = Entry(PageOne, textvariable=number, width=20, font=myfont)
-e.grid(columnspan=3, row=2, column=0, padx=15, pady=15)
+e.grid(columnspan=3, row=2, column=0, padx=(325,1), pady=15)
 Button(PageOne, text='1', command=lambda:num_get(1), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=3, column=0)
 Button(PageOne, text='2', command=lambda:num_get(2), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=3, column=1)
 Button(PageOne, text='3', command=lambda:num_get(3), borderwidth=5, relief=RAISED, height=1, width=10, font=myfont).grid(row=3, column=2)

@@ -66,6 +66,7 @@ def cancel():
     global cnt
     raise_frame(welcome)
     cnt = 0
+    e.delete(0, END)
 
 #toggle fullscreen
 def toggle_fullscreen(event=None):

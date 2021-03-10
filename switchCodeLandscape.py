@@ -60,6 +60,9 @@ def exit():
     number.set(num)
     cnt = 0
     count.set(num)
+    raise_frame(PageTwo)
+    root.update()
+    time.sleep(5)
     raise_frame(welcome)
     root.update()
 

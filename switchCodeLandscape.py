@@ -27,7 +27,6 @@ fullscreen = False
 
 def number_e():
     global number
-    global visible
     global count
     global cnt
     num = number.get()
@@ -38,7 +37,6 @@ def number_e():
     para = {'action': 'saveUserData', 'MOB': num, 'MCID': '002000311', 'BTNO': pushCnt}
     r = requests.post("http://clickcash.in/apisave/apiDataSavever2.php", data=para)
     print(r.text)
-    visible = True
     num=""
     number.set(num)
     cnt = 0
@@ -46,6 +44,22 @@ def number_e():
     raise_frame(PageTwo)
     root.update()
     time.sleep(5)
+    raise_frame(welcome)
+    root.update()
+
+def exit():
+    global number
+    global count
+    global cnt
+    pushCnt = str(cnt)
+    print(pushCnt)
+    para = {'action': 'saveUserData', 'MOB': '9999999999', 'MCID': '002000311', 'BTNO': pushCnt}
+    r = requests.post("http://clickcash.in/apisave/apiDataSavever2.php", data=para)
+    print(r.text)
+    num=""
+    number.set(num)
+    cnt = 0
+    count.set(num)
     raise_frame(welcome)
     root.update()
 
@@ -95,13 +109,6 @@ def setup():
     GPIO.setwarnings(False)
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(button, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    #GPIO.setmode(GPIO.BCM)
-    #GPIO.setup(signal, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-    #GPIO.setup(aux_vcc, GPIO.OUT)
-    #GPIO.output(aux_vcc, GPIO.HIGH)
-    #GPIO.setup(s2, GPIO.OUT)
-    #GPIO.setup(s3, GPIO.OUT)
-    print("\n")
 
 def endprogram():
     GPIO.cleanup()
@@ -126,6 +133,7 @@ def loop():
         cnt = cnt + 1
         count.set(cnt)
         print("count: ", cnt)
+        root.after(30000, exit)
     root.after(500, loop)
 
 #create the window

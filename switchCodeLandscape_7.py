@@ -128,6 +128,9 @@ def loop():
     global count
     global cnt
     c=0
+    time.sleep(0.1)
+    time.sleep(0.1)
+    time.sleep(0.1)
     a=GPIO.input(button)
     if(a == False):
         time.sleep(0.2)

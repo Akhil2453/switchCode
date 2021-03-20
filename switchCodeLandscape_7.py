@@ -5,6 +5,7 @@ from tkinter import *
 import tkinter.font as tkFont
 import requests
 from PIL import Image, ImageTk
+import os
 
 def raise_frame(frame):
     frame.tkraise()

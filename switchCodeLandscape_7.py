@@ -5,7 +5,6 @@ from tkinter import *
 import tkinter.font as tkFont
 import requests
 from PIL import Image, ImageTk
-import os
 
 def raise_frame(frame):
     frame.tkraise()
@@ -128,7 +127,7 @@ def loop():
     global count
     global cnt
     c=0
-    time.sleep(1)
+    #time.sleep(1)
     a=GPIO.input(button)
     if(a == False):
         time.sleep(0.2)
@@ -167,7 +166,7 @@ wel.grid(row=1, column=0, padx=50, pady=20)
 #wel.place(x=70, y=200)
 wel1 = Label(welcome, text="\nPlease drop\n\nyour waste bottle here\n\nto get rewarded", font=myfont)
 wel1.grid(row=2, column=0, padx=50, pady=0)
-load = Image.open("logo.jpg")
+load = Image.open("/home/pi/Desktop/switchCode/logo.jpg")
 load = load.resize((212,112), Image.BICUBIC)
 render = ImageTk.PhotoImage(load)
 img = Label(welcome, image=render)

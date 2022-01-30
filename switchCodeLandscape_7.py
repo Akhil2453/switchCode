@@ -34,7 +34,7 @@ def number_e():
     pushCnt = str(cnt)
     print(num)
     print(pushCnt)
-    para = {'action': 'saveUserData', 'MOB': num, 'MCID': '002000311', 'BTNO': pushCnt}
+    para = {'action': 'saveUserData', 'MOB': num, 'MCID': '002000330', 'BTNO': pushCnt}
     r = requests.post("http://clickcash.in/apisave/apiDataSavever2.php", data=para)
     print(r.text)
     num=""
@@ -51,9 +51,10 @@ def exit():
     global number
     global count
     global cnt
+    print("checking the count for no number entered: ", cnt)
     pushCnt = str(cnt)
     print(pushCnt)
-    para = {'action': 'saveUserData', 'MOB': '9999999999', 'MCID': '002000311', 'BTNO': pushCnt}
+    para = {'action': 'saveUserData', 'MOB': '9999999999', 'MCID': '002000330', 'BTNO': pushCnt}
     r = requests.post("http://clickcash.in/apisave/apiDataSavever2.php", data=para)
     print(r.text)
     num=""
@@ -166,7 +167,7 @@ wel.grid(row=1, column=0, padx=50, pady=20)
 #wel.place(x=70, y=200)
 wel1 = Label(welcome, text="\nPlease drop\n\nyour waste bottle here\n\nto get rewarded", font=myfont)
 wel1.grid(row=2, column=0, padx=50, pady=0)
-load = Image.open("/home/pi/Desktop/switchCode/logo.jpg")
+load = Image.open("/home/pi/switchCode/logo.jpg")
 load = load.resize((212,112), Image.BICUBIC)
 render = ImageTk.PhotoImage(load)
 img = Label(welcome, image=render)
